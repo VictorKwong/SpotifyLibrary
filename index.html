@@ -5,25 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="image/png" href="assets/images/favicon.ico" rel="icon" />
     <link rel="stylesheet" href="styles/style.css">
-    <title>Mining Battle</title>
+    <title>Victor's space</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Mining Battle</h1>
-        <p>Here are the instructions: ...</p>
-    </header>
-    <main>
-        <p class="currentGold"></p>
-        <p class="currentCrystal"></p>
-        <p class="clock"></p>
-        <button class="mining">mining</button>
-    </main>
-    <footer>
-        <p>Victor Wong Copyright ⓒ 2020</p>
-    </footer>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-    <!-- Uncaught ReferenceError: $ is not defined *.* sequence -->
+    <div class="pageContainer">
+        <div class="contentWrap">
+            <header class="bgFirst">
+                <section class="wrapper">
+                    <h1>My Spotify Library</h1>
+                    <p>Weclome! This website stores all of my favourite songs. Hope you all enjoy it!</p>
+                </section>
+            </header>
+            <main>
+                <h2>Select songs</h2>
+                <audio src="./assets/audio/Erik Lund - Summertime (Vlog No Copyright Music).mp3" controls></audio>
+                <figure>
+                    <img src="./assets/images/eriklund-Summertime.jpg" alt="Erik Lund - summertime image" class="songCircle" id ="1">
+                    <figcaption>
+                        <p>Erik Lund</p>
+                        <p>Summertime</p>
+                    </figcaption>
+                </figure>
+
+            </main>
+        </div>
+        <footer class="footer">
+            <p>Victor Wong Copyright ⓒ 2020</p>
+        </footer>
+    </div>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="js/script.js"></script>
 </body>

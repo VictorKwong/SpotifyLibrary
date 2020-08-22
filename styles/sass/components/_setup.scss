@@ -13,6 +13,7 @@ html {
   }
   body {
     font-size: 1.6rem;
+    font-family: 'Coming Soon', cursive;
   }
   .wrapper {
     max-width: 1200px;
@@ -36,12 +37,12 @@ html {
     overflow-x: hidden;
   }
 
-  .page-container {
+  .pageContainer {
     position: relative;
     min-height: 100vh;
   }
 
-  .content-wrap {
+  .contentWrap {
     padding-bottom: 4rem;
   }
 
