@@ -313,6 +313,9 @@ header p {
 
 figure {
   position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
 figcaption {
@@ -339,4 +342,9 @@ figure:hover figcaption,
 figure:focus figcaption {
   display: block;
   opacity: 1;
+}
+
+footer p {
+  margin-top: 50px;
+  text-align: center;
 }

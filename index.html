@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="image/png" href="assets/images/favicon.ico" rel="icon" />
+    <!-- https://flickity.metafizzy.co/ -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Victor's space</title>
 </head>
@@ -18,14 +21,41 @@
             </header>
             <main>
                 <h2>Select songs</h2>
-                <audio src="./assets/audio/Erik Lund - Summertime (Vlog No Copyright Music).mp3" controls></audio>
-                <figure>
-                    <img src="./assets/images/eriklund-Summertime.jpg" alt="Erik Lund - summertime image" class="songCircle" id ="1">
-                    <figcaption>
-                        <p>Erik Lund</p>
-                        <p>Summertime</p>
-                    </figcaption>
-                </figure>
+                <div>
+                    <ul class="gallery">
+                        <li>
+                            <figure>
+                                <img src="./assets/images/eriklund-Summertime.jpg" alt="Erik Lund - Summertime image" class="songCircle" id ="1">
+                                <figcaption>
+                                    <p>Erik Lund</p>
+                                    <p>Summertime</p>
+                                    <audio src="./assets/audio/Erik Lund - Summertime.mp3" controls></audio>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="./assets/images/ahrix-Dreams.jpg" alt="Ahrix - Dreams image" class="songCircle" id ="2">
+                                <figcaption>
+                                    <p>Ahrix</p>
+                                    <p>Dreams</p>
+                                    <audio src="./assets/audio/Ahrix - Dreams.mp3" controls></audio>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="./assets/images/itro&tobu-Cloud 9.jpg" alt="Itro & Tobu - Cloud 9 image" class="songCircle" id ="">
+                                <figcaption>
+                                    <p>Itro & Tobu</p>
+                                    <p>Cloud 9</p>
+                                    <audio src="./assets/audio/Itro & Tobu - Cloud 9.mp3" controls></audio>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
 
             </main>
         </div>
@@ -35,5 +65,48 @@
     </div>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="js/script.js"></script>
+    <!-- Copy and paste into it -->
+    <!-- https://flickity.metafizzy.co/ -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- smooth scroll plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    <script>
+        $(function(){
+            $('.gallery').flickity({
+                wrapAround: true,
+                autoPlay: true,
+                Parallax: true
+            });
+
+            /* to scroll smoothly */
+            $('a').smoothScroll({
+                /* count in ms */
+                speed:300
+            });
+            function listener(/* parameters */) {
+  console.log('eventName happened');
+}
+// bind event listener
+$carousel.on( 'eventName.flickity', listener );
+// unbind event listener
+$carousel.off( 'eventName.flickity', listener );
+// bind event listener to trigger once. note ONE not ON
+$carousel.one( 'eventName.flickity', function() {
+  console.log('eventName happened just once');
+});
+
+// jQuery
+var $carousel = $('.carousel').flickity({
+  on: {
+    ready: function() {
+      console.log('Flickity is ready');
+    },
+    change: function( index ) {
+      console.log( 'Slide changed to' + index );
+    }
+  }
+});
+        });
+    </script>
 </body>
 </html>
