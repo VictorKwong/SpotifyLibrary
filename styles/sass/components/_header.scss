@@ -1,5 +1,10 @@
 .bgFirst{
     background-color: lemonchiffon;
+    height: calc(100vh - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -8,14 +13,5 @@ header {
         font-size: 10rem;
         letter-spacing: 1.3rem;
         line-height: 17rem;
-        text-align: center;
     }
-    p{
-        text-align: center;
-    }
-
-
-
-
-
 }

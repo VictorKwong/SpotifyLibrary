@@ -13,8 +13,33 @@ musicStage.userChoice = function (){
         }
     })
 }
+
+musicStage.titlePage = function () {
+    $('.bgSec').hide();
+    $('.startGo').on('click', function() {
+        $('.bgFirst').hide();
+        $('.bgSec').show();
+        $('.gallery').flickity({
+            wrapAround: true,
+            autoPlay: true,
+            Parallax: true
+        });
+    })
+}
+
+musicStage.select = function (){
+    $('.next').on('click', function() {
+        console.log('next');
+    })
+    $('.previous').on('click', function() {
+        console.log('previous');
+    })
+}
+
 musicStage.init = () => {
+    musicStage.titlePage();
     musicStage.userChoice();
+    musicStage.select();
 }
 
 $(document).ready(musicStage.init());

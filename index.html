@@ -17,46 +17,50 @@
                 <section class="wrapper">
                     <h1>My Spotify Library</h1>
                     <p>Weclome! This website stores all of my favourite songs. Hope you all enjoy it!</p>
+                    <button class="startGo">Start</button>
                 </section>
             </header>
-            <main>
+            <main class="bgSec">
                 <h2>Select songs</h2>
-                <div>
-                    <ul class="gallery">
-                        <li>
-                            <figure>
-                                <img src="./assets/images/eriklund-Summertime.jpg" alt="Erik Lund - Summertime image" class="songCircle" id ="1">
-                                <figcaption>
-                                    <p>Erik Lund</p>
-                                    <p>Summertime</p>
-                                    <audio src="./assets/audio/Erik Lund - Summertime.mp3" controls></audio>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./assets/images/ahrix-Dreams.jpg" alt="Ahrix - Dreams image" class="songCircle" id ="2">
-                                <figcaption>
-                                    <p>Ahrix</p>
-                                    <p>Dreams</p>
-                                    <audio src="./assets/audio/Ahrix - Dreams.mp3" controls></audio>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./assets/images/itro&tobu-Cloud 9.jpg" alt="Itro & Tobu - Cloud 9 image" class="songCircle" id ="">
-                                <figcaption>
-                                    <p>Itro & Tobu</p>
-                                    <p>Cloud 9</p>
-                                    <audio src="./assets/audio/Itro & Tobu - Cloud 9.mp3" controls></audio>
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
+                <section>
+                    <div>
+                        <ul class="gallery">
+                            <li>
+                                <figure>
+                                    <img src="./assets/images/eriklund-Summertime.jpg" alt="Erik Lund - Summertime image" class="songCircle" id ="1">
+                                    <figcaption>
+                                        <p>Erik Lund</p>
+                                        <p>Summertime</p>
 
-
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="./assets/images/ahrix-Dreams.jpg" alt="Ahrix - Dreams image" class="songCircle" id ="2">
+                                    <figcaption>
+                                        <p>Ahrix</p>
+                                        <p>Dreams</p>
+                                        <audio src="./assets/audio/Ahrix - Dreams.mp3" controls></audio>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="./assets/images/itro&tobu-Cloud 9.jpg" alt="Itro & Tobu - Cloud 9 image" class="songCircle" id ="">
+                                    <figcaption>
+                                        <p>Itro & Tobu</p>
+                                        <p>Cloud 9</p>
+                                        <audio src="./assets/audio/Itro & Tobu - Cloud 9.mp3" controls></audio>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="spaceTop">
+                    <audio class="audioSetting" src="./assets/audio/Erik Lund - Summertime.mp3" controls></audio>
+                </section>
             </main>
         </div>
         <footer class="footer">
@@ -72,40 +76,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script>
         $(function(){
-            $('.gallery').flickity({
-                wrapAround: true,
-                autoPlay: true,
-                Parallax: true
-            });
-
             /* to scroll smoothly */
             $('a').smoothScroll({
                 /* count in ms */
                 speed:300
             });
-            function listener(/* parameters */) {
-  console.log('eventName happened');
-}
-// bind event listener
-$carousel.on( 'eventName.flickity', listener );
-// unbind event listener
-$carousel.off( 'eventName.flickity', listener );
-// bind event listener to trigger once. note ONE not ON
-$carousel.one( 'eventName.flickity', function() {
-  console.log('eventName happened just once');
-});
-
-// jQuery
-var $carousel = $('.carousel').flickity({
-  on: {
-    ready: function() {
-      console.log('Flickity is ready');
-    },
-    change: function( index ) {
-      console.log( 'Slide changed to' + index );
-    }
-  }
-});
         });
     </script>
 </body>
