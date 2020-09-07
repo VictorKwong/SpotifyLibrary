@@ -19,11 +19,6 @@ musicStage.titlePage = function () {
     $('.startGo').on('click', function() {
         $('.bgFirst').hide();
         $('.bgSec').show();
-        $('.gallery').flickity({
-            wrapAround: true,
-            autoPlay: true,
-            Parallax: true
-        });
     })
 }
 

@@ -53,3 +53,14 @@ figure:focus figcaption{
     display: flex;
     margin: 0 auto;
 }
+
+.buttonNext,
+.buttonPrevious{
+    border:none;
+    background-color: white;
+}
+
+.menuSection {
+    display: flex;
+    justify-content: space-between;
+}
