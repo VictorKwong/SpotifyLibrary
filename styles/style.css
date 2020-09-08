@@ -349,6 +349,7 @@ figcaption {
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 figure:hover figcaption,
@@ -361,7 +362,7 @@ figure:focus figcaption {
   margin-top: 50px;
 }
 
-.audioSetting {
+.audioSelect {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
