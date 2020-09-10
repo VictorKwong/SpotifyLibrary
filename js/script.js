@@ -3,12 +3,8 @@ const musicStage = {};
 /* Identify the user location inside the music description */
 let userlocation = 0;
 
-const musicCode = {
-    
-}
-
 const musicDescription = {
-    id = ['bgm0','bgm1','bgm2','bgm3','bgm4','bgm5','bgm6','bgm7'],
+    id: ['bgm0','bgm1','bgm2','bgm3','bgm4','bgm5','bgm6','bgm7'],
     bgm0: {
         author : 'Erik Lund',
         song: 'Summertime',
@@ -91,12 +87,32 @@ musicStage.select = function (){
         }
         /* I clear out the id, and add another new ID */
         for (let i = 0; i < 4 ; i++){
-
-        $('.blog' & i).removeAttr('id').attr('id', musicDescription.bgm + (`${userlocation}` + i).id);
+            let temp = i + userlocation;
+            console.log(temp);
+        $('.blog' + i).removeAttr('id').attr('id', musicDescription.id[i + userlocation]);
+        /* Switch All*/
+        $('.author' + i).html(musicDescription[musicDescription.id[i + userlocation]].author);
+        $('.song' + i).html(musicDescription[musicDescription.id[i + userlocation]].song);
+        document.getElementsByClassName('image' + i)[0].setAttribute('src', musicDescription[musicDescription.id[i + userlocation]].image);
         }
     })
     $('.buttonPrevious').on('click', function() {
         console.log('previous');
+        /* set maximum pages */
+        if( userlocation >= 4){
+            userlocation = userlocation - 4;
+
+        }
+        /* I clear out the id, and add another new ID */
+        for (let i = 0; i < 4 ; i++){
+            let temp = i + userlocation;
+            console.log(temp);
+        $('.blog' + i).removeAttr('id').attr('id', musicDescription.id[i + userlocation]);
+        /* Switch All*/
+        $('.author' + i).html(musicDescription[musicDescription.id[i + userlocation]].author);
+        $('.song' + i).html(musicDescription[musicDescription.id[i + userlocation]].song);
+        document.getElementsByClassName('image' + i)[0].setAttribute('src', musicDescription[musicDescription.id[i + userlocation]].image);
+        }
     })
 
     /* when user click the circle */
