@@ -88,7 +88,6 @@ musicStage.select = function (){
         /* I clear out the id, and add another new ID */
         for (let i = 0; i < 4 ; i++){
             let temp = i + userlocation;
-            console.log(temp);
         $('.blog' + i).removeAttr('id').attr('id', musicDescription.id[i + userlocation]);
         /* Switch All*/
         $('.author' + i).html(musicDescription[musicDescription.id[i + userlocation]].author);
@@ -101,12 +100,10 @@ musicStage.select = function (){
         /* set maximum pages */
         if( userlocation >= 4){
             userlocation = userlocation - 4;
-
         }
         /* I clear out the id, and add another new ID */
         for (let i = 0; i < 4 ; i++){
             let temp = i + userlocation;
-            console.log(temp);
         $('.blog' + i).removeAttr('id').attr('id', musicDescription.id[i + userlocation]);
         /* Switch All*/
         $('.author' + i).html(musicDescription[musicDescription.id[i + userlocation]].author);
@@ -121,9 +118,7 @@ musicStage.select = function (){
         console.log(this.id);
         /* Get the first element with a class of 'audioSelect', change the src */
         document.getElementsByClassName('audioSelect')[0].setAttribute('src', musicDescription[this.id].location);
-    })
-    $('.test1').on('click', function() {
-        console.log('test');
+        $('.selectSong').html(`${musicDescription[this.id].author} - ${musicDescription[this.id].song}`)
     })
 }
 

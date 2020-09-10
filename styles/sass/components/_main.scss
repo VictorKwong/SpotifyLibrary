@@ -32,7 +32,8 @@ figcaption {
     border-radius: 50%;
     width: 250px;
     height: 250px;
-    padding: 30px;
+    padding: 60px 25px;
+    line-height: 4rem;
     background: linear-gradient(rgba(0,0,0,0.8));
     opacity:0;
     transition:all 0.3s ease-in-out;
@@ -64,4 +65,22 @@ figure:focus figcaption{
 .menuSection {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.nameDecorate{
+    font-weight: bolder;
+}
+
+main a{
+    color: lightgreen;
+}
+
+main a:hover,
+main a:focus{
+    opacity: 0.6;
+}
+
+main a:active{
+    color:darkgreen;
 }
